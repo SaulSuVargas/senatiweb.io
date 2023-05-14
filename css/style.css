@@ -1,0 +1,817 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2? family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --hue-color: 220;
+
+    --primer-color: hsl(var(--hue-color), 84%, 22%);
+    --first-color-n: hsl(var(--hue-color), 84%, 15%);
+    --segundo-color: hsl(var(--hue-color), 89%, 60%);
+    --segundo-color-n: hsl(var(--hue-color), 89%, 50%);
+    --titulo-color: hsl(var(--hue-color), 84%, 18%);
+    --text-color: hsl(var(--hue-color), 24%, 10%);
+    --text-color-l: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 100%, 99%);
+    --color-blanco: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  
+    /*========== Tamaño de fuente ==========*/
+    --body-letra: 'Open Sans', sans-serif;
+    --titulo-letra: 'Raleway', sans-serif;
+    --letra-grande: 2.5rem;
+    --letra-h1: 1.5rem;
+    --letra-h2: 1.25rem;
+    --letra-h3: 1rem;
+    --letra-normal: .938rem;
+    --letra-pequeña: .813rem;
+    --letra-pulga: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medio: 500;
+    --font-semi-n: 600;
+  
+    /*========== Margenes hacia abajo(bottom) ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+  
+    /*========== z index ==========*/
+    --z-atras: 1;
+    --z-fija: 10;
+  
+    /*========== Overlay ==========*/
+    --img-ocultar: hidden;
+    --img-scale: scale(1.1);
+  }
+  
+@media screen and (min-width: 968px) {
+    :root {
+        --letra-grande: 4rem;
+        --letra-h1: 2.25rem;
+        --letra-h2: 1.75rem;
+        --letra-h3: 1.25rem;
+        --letra-normal: 1rem;
+        --letra-pequeña: .875rem;
+        --letra-pulga: .813rem;
+    }
+}
+
+/* UNIVERSAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    margin: 3rem 0 0 0;
+    font-family: var(--body-letra);
+    font-size: var(--letra-normal);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: all .5s ease;
+}
+
+h1, h2 , h3 {
+    color: var(--titulo-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--titulo-letra);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input {
+    border: none;
+    font-family: var(--body-letra);
+    font-size: var(--letra-normal);
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+/* ===== CLASES ===== */
+.section {
+    padding: 4.5rem 0 2.5rem;
+}
+
+.section_titulo {
+    font-size: var(--letra-h2);
+    color: var(--titulo-color);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: var(--mb-2);
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fija);
+    background-color: transparent;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+.nav_togle {
+    color: var(--color-blanco);
+}
+
+.logo {
+    font-weight: var(--font-semi-n);
+}
+
+.nav_togle {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav_menu {
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .nav_menu {
+        position: fixed;
+        background-color: var(--body-color);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, .15);
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+.nav_list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.nav_link {
+    color: var(--text-color-l);
+    font-weight: var(--font-semi-n);
+    text-transform: uppercase;
+}
+
+.nav_link:hover {
+    color: var(--text-color);
+}
+
+.nav_cerrar {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--titulo-color);
+    cursor: pointer;
+}
+
+/* ==== FUNCIONES JAVASCRIPT ==== */
+/* MOSTRAR MENU */
+.show-menu {
+    right: 0;
+}
+
+/* CAMBIAR EL COLOR DEL HEADER AL BAJAR*/
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px hsla(var(--hsl-color), 64%, 15%, .85);
+}
+
+/* CAMBIAMOS EL COLOR DEL ICON AL BAJAR*/
+.scroll-header .logo,
+.scroll-header .nav_togle {
+    color: var(--titulo-color);
+}
+
+
+/* ==== SECCION INICIO ====*/
+.inicio_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 45%;
+    filter: brightness(50%);
+}
+
+.inicio_container {
+    position: relative;
+    height: calc(100vh - 3rem);
+    align-content: center;
+    row-gap: 3rem;
+}
+
+.inicio-subtitulo,
+.inicio-titulo,
+.inicio_social-link,
+.inicio_info {
+    color: var(--color-blanco);
+}
+
+.inicio-subtitulo {
+    display: block;
+    font-weight: var(--font-semi-n);
+    margin-bottom: var(--mb-0-75);
+}
+
+.inicio-titulo {
+    font-size: var(--letra-grande);
+    font-weight: var(--font-medio);
+    margin-bottom: var(--mb-2-5);
+}
+
+.inicio_social {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.inicio_social-link {
+    font-size: 1.2rem;
+    width: max-content;
+}
+
+.inicio_info {
+    background-color: var(--primer-color);
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    column-gap: .5rem;
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    width: 200px;
+}
+
+.inicio_info-titulo {
+    display: block;
+    font-size: var(--letra-pequeña);
+    font-weight: var(--font-semi-n);
+    margin-bottom: var(--mb-0-75);
+}
+
+.inicio_info-button {
+    font-size: var(--letra-pulga);
+}
+
+.inicio_info-overlay {
+    overflow: var(--img-ocultar);
+}
+
+.inicio_info-img {
+    width: 150px;
+    transition: .3s;
+}
+
+.inicio_info-img:hover{
+    transform: var(--img-scale);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primer-color);
+    color: var(--color-blanco);
+    padding: 1rem 1rem;
+    font-weight: var(--font-semi-n);
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-n);
+}
+
+.button-flex {
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+.button-link {
+    background: none;
+    padding: 0;
+}
+
+.button-link:hover {
+    background: none;
+}
+
+/* ===== SECCION SENATI Y SINFO =====*/
+.senati_datos {
+    text-align: center;
+}
+
+.senati_container {
+    row-gap: 2.5rem;
+}
+
+.senati_titulo {
+    color: var(--segundo-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--letra-h1);
+    font-weight: var(--font-semi-n);
+}
+
+.senati_descripcion {
+    margin-bottom: var(--mb-2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.senati_img {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.senati_img-overlay {
+    overflow: var(--img-ocultar);
+}
+
+.senati_img-uno {
+    width: 150px;
+}
+
+.senati_img-dos {
+    width: 180px;
+}
+
+.senati_img-tres {
+    transition: .3s;
+    width: 250px;
+}
+
+.senati_img-uno,
+.senati_img-dos {
+    transition: .3s;
+}
+
+.senati_img-uno:hover,
+.senati_img-dos:hover,
+.senati_img-tres:hover {
+    transform: var(--img-scale);
+}
+
+/* ====== SECCION SEDES ====== */
+.sedes_card {
+    position: relative;
+    width: 200px;
+    overflow: var(--img-ocultar);
+}
+
+.sedes_datos {
+    position: absolute;
+    bottom: .50rem;
+    left: 1rem;
+}
+
+.sedes_titulo,
+.sedes_subtitulo {
+    color: var(--color-blanco);
+}
+
+.sede_titulo {
+    color: var(--segundo-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--letra-h1);
+    font-weight: var(--font-semi-n);
+}
+
+.sedes_titulo {
+    font-size: var(--letra-h3);
+    margin-bottom: var(--mb-0-25);
+}
+
+.sedes_subtitulo {
+    display: block;
+    font-size: var(--letra-pulga);
+}
+
+.sedes_img {
+    transition: .3s;
+    filter: brightness(60%);
+}
+
+.sedes_img:hover {
+    transform: var(--img-scale);
+}
+
+/* SECCION FOOTER */
+.footer_container {
+    row-gap: 5rem;
+}
+
+.footer_contenido {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    row-gap: 2rem;
+}
+
+.footer_titulo,
+.footer_subtitulo {
+    font-size: var(--letra-h3);
+}
+
+.footer_titulo {
+    margin-bottom: var(--mb-0-5);
+}
+
+.footer_descripcion {
+    margin-bottom: var(--mb-2);
+}
+
+.footer_social {
+    font-size: 1.25rem;
+    color: var(--titulo-color);
+    margin-right: var(--mb-1-25);
+}
+
+.footer_subtitulo {
+    margin-bottom: var(--mb-1);
+}
+
+.footer_item {
+    margin-bottom: var(--mb-0-75);
+}
+
+.footer_link {
+    color: var(--text-color-l);
+}
+
+.footer_link:hover {
+    color: var(--titulo-color);
+}
+
+.footer_creditos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    text-align: center;
+}
+
+.footer_copy,
+.footer_terms-link {
+    font-size: var(--letra-pequeña);
+    color: var(--text-color-l);
+}
+
+.footer_terms {
+    display: flex;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer_terms-link:hover {
+    color: var(--text-color);
+}
+
+/* SCROLL */
+.scroll {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--segundo-color);
+    padding: .5rem;
+    display: flex;
+    opacity: .9;
+    z-index: var(--z-atras);
+    transition: .4s;
+}
+
+.scroll-icon {
+    color: var(--color-blanco);
+}
+
+.scroll:hover {
+    background-color: var(--segundo-color-n);
+    opacity: 1;
+}
+
+/* MOSTRAR SCROLL */
+.mostrar-scroll {
+    bottom: 5rem;
+}
+
+/* COLOR DE SECCIONES (LINK) */
+.active-link {
+    position: relative;
+    color: var(--segundo-color-n);
+}
+
+.active-link::before {
+    content: "";
+    position: absolute;
+    background-color: var(--segundo-color-n);
+    width: 100%;
+    height: 2px;
+    bottom: -.75rem;
+    left: 0;
+}
+
+/* SCROLL DE NAVEGACION */
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-l);
+}
+
+/* ===== BOTON DE CAMBIO DE TEMA*/
+.nav_dark {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 4rem;
+}
+
+.change-theme,
+.change-theme-name {
+    color: var(--text-color);
+}
+
+.change-theme {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.change-theme-name {
+    font-size: var(--letra-pequeña);
+}
+
+/* ===== TEMA OSCURO ===== */
+body.dark-theme {
+    --segundo-color: hsl(var(--hue-color), 54%, 90%);
+    --titulo-color: hsl(var(--hue-color), 24%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(210,2%,14%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/* ====== MEDIA QUERYS ======= */
+@media screen and (min-width: 320px) {
+    .sedes_container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 420px) {
+    .sedes_container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 410px;
+    }
+}
+/* PARA TABLETS */
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .nav {
+        height: calc(3rem + 1.5rem);
+    }
+
+    .nav_link {
+        color: var(--color-blanco);
+        text-transform: initial;
+    }
+
+    .nav_link:hover {
+        color: var(--color-blanco);
+    }
+
+    .nav_dark {
+        position: initial;
+    }
+
+    .nav_menu {
+        display: flex;
+        column-gap: 1rem;
+    }
+
+    .nav_list {
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+
+    .nav_togle,
+    .nav_cerrar,
+    .change-theme-name {
+        display: none;
+    }
+
+    .change-theme {
+        color: var(--color-blanco);
+    }
+
+    .active-link::before {
+        background-color: var(--color-blanco);
+    }
+
+    .scroll-header .nav_link {
+        color: var(--text-color);
+    }
+
+    .scroll-header .active-link {
+        color: var(--titulo-color);
+    }
+
+    .scroll-header .active-link::before {
+        background-color: var(--titulo-color);
+    }
+
+    .scroll-header .change-theme {
+        color: var(--text-color);
+    }
+
+    .section {
+        padding: 7rem 0 2rem;
+    }
+
+    .inicio_container {
+        height: 100vh;
+        grid-template-rows: 1.8fr .5fr;
+    }
+
+    .inicio_datos {
+        align-self: flex-end;
+    }
+
+    .inicio_social {
+        flex-direction: row;
+        align-self: flex-end;
+        margin-bottom: 3rem;
+        column-gap: 2.5rem;
+    }
+
+    .inicio_info {
+        bottom: 3rem;
+    }
+
+    .senati_container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .senati_datos,
+    .senati_titulo {
+        text-align: initial;
+    }
+
+    .senati_titulo {
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .senati_descripcion {
+        margin-bottom: var(--mb-2);
+    }
+    
+    .sedes_titulo {
+        font-size: var(--letra-h2);
+    }
+
+    .sedes_container {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2rem;
+    }
+
+    .footer_creditos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* PARA LAPTOPS/pc  */
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inicio_container {
+        grid-template-rows: 2fr .5fr;
+    }
+
+    .inicio_info {
+        width: 328px;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+
+    .inicio_info-titulo {
+        font-size: var(--letra-normal);
+    }
+
+    .inicio_info-img {
+        width: 240px;
+    }
+
+    .senati_img-uno {
+        width: 240px;
+    }
+
+    .senati_img-dos {
+        width: 290px;
+    }
+
+    .senati_img-tres {
+        width: 380px;
+    }
+
+    .sedes_card {
+        width: 400px;
+    }
+
+    .sedes_container {
+        width: 1000px;
+    }
+
+    .sedes_datos {
+        left: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .sedes_titulo {
+        font-size: var(--letra-h2);
+    }
+
+    .footer_contenido {
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* PLUS ADICIONAL PC/MOBIL */

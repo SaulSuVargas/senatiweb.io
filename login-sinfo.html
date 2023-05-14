@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <!-- ICONOS (Fontawesome)-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/style-formu.css">
+</head>
+<body>
+    
+    <!-- Iniciar sesion -->
+    <div class="form-container sign-in-form">
+        <div class="form-box sign-in-box">
+            <h2>Bienvenido a Sinfo</h2>
+                <div class="field">
+                    <i class="uil uil-user"></i>
+                    <input type="text" placeholder="Ingrese su ID" id="ID" required maxlength="8">
+                </div>
+                <div class="field">
+                    <i class="uil uil-lock-alt"></i>
+                    <input class="password-input" type="password" id="PASS" placeholder="Ingrese su NIP" required >
+                    <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
+                </div>
+                <div class="forgot-link">
+                    <a href="">Has olvidado tu contraseña?</a>
+                </div>
+                <input class="submit-btn" type="submit" value="Ingresar" onclick="login()">
+                <input class="submit-btn20" type="submit" value="Reset" onclick="reset()">
+        </div>
+        <div class="imgBox sign-in-imgBox">
+            <div class="sliding-link">
+                <span class="sign-up-btn">!Hola soy Tony!<br>Ingresa a tu cuenta</span>
+            </div>
+            <img src="media/Tony.png" alt="">
+        </div>
+    </div>
+    <script src="//code.tidio.co/wcwh2vqflqprm1kzbz7vzqua14lvrrqd.js" async></script>
+    <script src="js/form.js"></script>
+    <script src="js/validacion.js"></script>
+</body>
+</html>

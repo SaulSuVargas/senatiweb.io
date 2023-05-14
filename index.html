@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENATI WEB SITE</title>
+
+    <!-- ESTILO DE PAGINA -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ICONOS (REMIXICON) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#inicio" class="logo">SENATI</a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="#inicio" class="nav_link active-link">Inicio</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#nosotros" class="nav_link">Nosotros</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#sedes" class="nav_link">Sedes</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#sinfo" class="nav_link">Sinfo</a>
+                    </li>
+                </ul>
+
+                <div class="nav_dark">
+                    <!-- ICONOS DEL CAMBIO DE TEMA -->
+                    <span class="change-theme-name">Modo Oscuro</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav_cerrar" id="nav-cerrar"></i>
+            </div>
+
+            <div class="nav_togle" id="nav-togle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="principal">
+        <!-- SECCION INICIO -->
+        <section class="inicio" id="inicio">
+            <img src="img/menu2.jpg" alt="" class="inicio_img">
+        
+            <div class="inicio_container container grid">
+                <div class="inicio_datos">
+                    <span class="inicio-subtitulo">El futuro está en nuestras manos</span>
+                    <h1 class="inicio-titulo">Bienvenidos <br> a <b>SENATI <br> Escuela TI</b></h1>
+                    <a href="#nosotros" class="button">Saber mas</a>
+                </div>
+                <!-- Redes sociales senati -->
+                <div class="inicio_social">
+                    <a href="https://www.facebook.com/SenatiOficial" target="_blank" class="inicio_social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/senati_oficial/?next=%2F" target="_blank" class="inicio_social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="99999999" target="_blank" class="inicio_social-link">
+                        <i class="ri-phone-fill"></i>
+                    </a>
+                </div>
+
+                <div class="inicio_info">
+                    <div>
+                        <span class="inicio_info-titulo">Conoce a tu asistente virtual</span>
+                        <a href="#sinfo" class="button button-flex button-link inicio_info-button">
+                            Conocer <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                    <!-- Conoce a tony(robot) -->
+                    <div class="inicio_info-overlay">
+                        <img src="img/tony2.png" alt="robotsenati" class="inicio_info-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION NOSOTROS -->
+        <section class="senati section" id="nosotros">
+            <div class="senati_container container grid">
+                <div class="senati_datos">
+                    <h2 class="section_titulo senati_titulo">Sobre Nosotros</h2>
+                    <p class="senati_descripcion">SENATI es una institución creada a iniciativa de la Sociedad Nacional de 
+                        Industrias, con el objetivo de proporcionar formación y capacitación profesional en actividades industriales 
+                        y también para labores en instalaciones, reparaciones y mantenimiento para cualquier otra actividad económica.
+                    </p>
+                    <a href="#" class="button">Matricularme</a>
+                </div>
+                
+
+                <div class="senati_img">
+                    <div class="senati_img-overlay">
+                        <img src="img/info.jpg" alt="" class="senati_img-uno">
+                    </div>
+                    <div class="senati_img-overlay">
+                        <img src="img/info2.jpg" alt="" class="senati_img-dos">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sedes section" id="sedes">
+            <h2 class="section_titulo sede_titulo">Nuestras Sedes <br> de Lima</h2>
+            <!-- CARRUSEL -->
+            <div class="sedes_container container swiper-container">
+                <div class="swiper-wrapper">   
+                    <!-- SEDE INDEPENDENCIA -->
+                    <div class="sedes_card swiper-slide">  
+                        <img src="img/independencia.jpg" class="sedes_img" alt="">
+                        <div class="sedes_datos">
+                            <h2 class="sedes_titulo">Independecia</h2>
+                            <span class="sedes_subtitulo">8AM a 6PM</span>
+                        </div>
+                    </div>
+                    <!-- SEDE VILLA EL SALVADOR -->
+                    <div class="sedes_card swiper-slide">  
+                        <img src="img/villa.jpg" class="sedes_img" alt="">
+                        <div class="sedes_datos">
+                            <h2 class="sedes_titulo">Villa el Salvador</h2>
+                            <span class="sedes_subtitulo">8AM a 6PM</span>
+                        </div>
+                    </div>
+                    <!-- SEDE CERCADO DE LIMA -->
+                    <div class="sedes_card swiper-slide">  
+                        <img src="img/cercado.jpg" class="sedes_img" alt="">
+                        <div class="sedes_datos">
+                            <h2 class="sedes_titulo">Cercado de Lima</h2>
+                            <span class="sedes_subtitulo">8AM a 6PM</span>
+                        </div>
+                    </div>
+                    <!-- SEDE SAN MARTIN DE PORRES -->
+                    <div class="sedes_card swiper-slide">  
+                        <img src="img/sanmartin.jpg" class="sedes_img" alt="">
+                        <div class="sedes_datos">
+                            <h2 class="sedes_titulo">San Martin de Porres</h2>
+                            <span class="sedes_subtitulo">8AM a 6PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION SINFO -->
+        <section class="senati section" id="sinfo">
+            <div class="senati_container container grid">
+                <div class="senati_datos">
+                    <h2 class="section_titulo senati_titulo">Bienvenido!<br> A tu Sinfo</h2>
+                    <p class="senati_descripcion">Hola! Soy Tony tu robot asistente virtual de SENATI, te ayudare con tus dudas y consultas.
+                        Como también te puedo ayudar a ingresar a tu sitio web SINFO, la cual SENATI, pone a disposicion
+                        de los alumnos para su proceso de educación y ver todo lo relacionado a su perfil personal de SENATI.
+                    </p>
+                    <a href="login-sinfo.html" class="button">Ingresar</a>
+                </div>
+                
+                <div class="senati_img">
+                    <div class="senati_img-overlay">
+                        <img src="img/sinfo.png" alt="" class="senati_img-tres">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer section">
+        <div class="footer_container container grid">
+            <div class="footer_contenido grid">
+                <div class="footer_datos">
+                    <h3 class="footer_titulo">SENATI</h3>
+                    <p class="footer_descripcion">Senati el futuro <br> esta en tus manos, <br>
+                    matriculate ahora!
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/SenatiOficial" target="_blank" class="footer_social">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/senati_oficial/?next=%2F" target="_blank" class="footer_social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="99999999" target="_blank" class="footer_social">
+                            <i class="ri-phone-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_datos">
+                    <h3 class="footer_subtitulo">Nosotros</h3>
+
+                    <ul>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Sobre Senati</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Autoridades</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Sedes</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer_datos">
+                    <h3 class="footer_subtitulo">Postulantes</h3>
+
+                    <ul>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Empresas</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Alumnos</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Egresados</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer_datos">
+                    <h3 class="footer_subtitulo">Ayuda</h3>
+
+                    <ul>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Admisión</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Contáctenos</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_link">Atención al alumno </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_creditos">
+                <p class="footer_copy">&#169; 2022 Saul Su</p>
+                <div class="footer_terminos">
+                    <a href="#" class="footer_terms-link">Terminos y Condiciones</a>
+                    <a href="#" class="footer_terms-link">Todos los derechos reservados</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL (TE REDIRGIE ARRIBA) -->
+    <a href="#" class="scroll" id="scroll-arriba">
+        <i class="ri-arrow-up-line scroll-icon"></i>
+    </a>
+
+    <script src="js/swiper-bundle.min.js" ></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
